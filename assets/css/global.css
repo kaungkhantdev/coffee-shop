@@ -50,3 +50,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: auto;
     background-color: rgba(0, 0, 0, 0.867);
 }
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #1245ff !important;
+}

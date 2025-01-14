@@ -30,7 +30,7 @@ const addToCartItems = (event) => {
     const button = event.target;
     const productDiv = button.closest('.col-6'); 
 
-    const imageUrl = document.querySelector('.col-6.col-md-4.col-lg-3 img').src;
+    const imageUrl = productDiv.querySelector('.col-6.col-md-4.col-lg-3 img').src;
     const productName = productDiv.querySelector('h5').textContent;
     const productPrice = productDiv.querySelector('.fw-bold').textContent; 
     const stars = productDiv.querySelectorAll('svg'); 

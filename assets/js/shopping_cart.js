@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="mb-4">
                             <p class="mb-0 ">
-                                price: <span class="fw-bold"> $ ${element.price}</span>
+                                price: <span class="fw-bold"> $ ${element.price}.00</span>
                             </p>
                         </div>
                     </div>

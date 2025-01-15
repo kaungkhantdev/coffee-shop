@@ -33,6 +33,22 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
+}
+.slide-box div {
+    z-index: 2;
+    position: relative;
+}
+.slide-box::before {
+    z-index: 1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.151);
 }
 
 .slide-box-item {
@@ -53,4 +69,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: #1245ff !important;
+}
+
+.subscription-card {
+    border: 1px solid #59595919;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.subscription-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.048);
+}
+.special-offer {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }

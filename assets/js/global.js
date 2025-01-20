@@ -67,3 +67,7 @@ const updateCartDisplay = () => {
 document.addEventListener('DOMContentLoaded', () => {
     updateCartDisplay();
 });
+
+const mailTo = () => {
+    window.location.href='mailto:mail@example.org'
+}

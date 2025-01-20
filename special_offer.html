@@ -10,6 +10,7 @@
 </head>
 <body>
     
+    
     <!-- header section  -->
     <header>
       <nav class="navbar navbar-expand-lg py-3 px-lg-5 position-fixed z-3 w-100 bg-white border-bottom">
@@ -32,7 +33,7 @@
                   <a class="nav-link" href="./brewing_equipment.html">Brewing Equipments</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./special_offer.html">Special offers</a>
+                  <a class="nav-link active" href="./special_offer.html">Special offers</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -49,7 +50,7 @@
                   <button class="btn btn-outline-dark rounded-0" type="submit">Sign in</button>
               </form>
               <div class="ms-lg-2 mt-3 mt-lg-0">
-                  <a href="./shopping_cart.html" class=" btn btn-primary rounded-0 position-relative">
+                  <a href="./shopping_cart.html" class=" btn btn-outline-dark rounded-0 position-relative">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                           <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
                       </svg>
@@ -65,55 +66,120 @@
       </nav>
 
     </header>
-  
+
+    <!-- Modal -->
+    <div class="modal fade" id="workshopModal" tabindex="-1" aria-labelledby="workshopModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content rounded-1">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="workshopModalLabel">Register</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body border-0">
+                <div class="container">
+                    <div class="row justify-content-center">
+                      <div class="col-12">
+                        <div class="card border-0 shadow-none">
+                          <div class="card-body">
+                            <form>
+                              <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="rounded-0 form-control" id="name" placeholder="Enter your full name" required>
+                              </div>
+                              <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="rounded-0 form-control" id="email" placeholder="Enter your email" required>
+                              </div>
+                              <div class="mb-3">
+                                <label for="phone" class="form-label">phone</label>
+                                <input type="text" class="rounded-0 form-control" id="phone" placeholder="Create a phone" required>
+                              </div>
+                              <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input rounded-0" id="terms" required>
+                                <label class="form-check-label" for="terms">I agree to the <a href="#">terms and conditions</a></label>
+                              </div>
+                              <button onclick="mailTo()" type="submit" class="btn btn-dark rounded-0 w-100">Register</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
     
     <!-- hero section  -->
-    <section>
-      <div class="px-5 py-2  text-center w-100" style=" height: 100px;">
-      </div>
-    </section>
-
-
-    <!-- shopping cart  -->
-    <section class="container px-lg-5 my-5">
-        <div class="row px-lg-5 align-items-center justify-content-center">
-            <div class="col-12">
-                <div class=" text-center mb-5">
-                    <h1 class="">SHOPPING CARTS</h1>
-                    <div class=" bg-dark d-inline-block" style="width: 100px; padding: 1px;"></div>
-                </div>
-            </div>
-
-
-            <div class="col-12 col-lg-6">
-                <div class="">
-                    <h5 class="d-flex justify-content-between align-items-center mb-3">
-                      <span class="text-primary">Your cart</span>
-                      <span class="badge bg-primary rounded-pill cartItem">0</span>
-                    </h5>
-                    <div>
-                      <div class="col-12 mt-5" id="cartData">
-                       <!-- will replace by js  -->
-                    </div>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between mb-5">
-                      <h5>Total:</h5>
-                      <h5 id="totalPrice">$ 0</h5>
-                    </div>
-                    <div class=" d-flex align-items-center justify-content-between">
-                        <div class="">
-                          <a href="./coffee.html" class="">Continue shopping</a>
-                        </div>
-                        <button class="btn btn-dark btn-lg rounded-0">Checkout</button>
-                    </div>
-                </div>
-            </div>
-            
-           
+    <section class="pt-5">
+        <div class=" text-center pt-5 mb-5">
+            <h1 class="pt-5">Special Offers and Subscriptions</h1>
+            <div class=" bg-dark d-inline-block" style="width: 100px; padding: 1px;"></div>
         </div>
-        
     </section>
-    
+
+    <!-- special offers  -->
+    <div class="container py-5">
+        
+        <div class="row">
+          <!-- Basic Plan -->
+          <div class="col-md-4 col-12" >
+            <div class="card subscription-card p-4 rounded-1">
+              <div>
+                <h3 class="card-title">Basic Plan</h3>
+                <p class="text-muted">Perfect for occasional coffee drinkers.</p>
+              </div>
+              <h4 class="text-primary">$19.99/month</h4>
+              <div>
+                <ul class="list-unstyled">
+                    <li>✔ 2 coffee bean deliveries per month</li>
+                    <li>✔ Free shipping</li>
+                </ul>
+              </div>
+              <button class="btn btn-dark mt-3 rounded-0">Subscribe Now</button>
+            </div>
+          </div>
+          <!-- Standard Plan -->
+          <div class="col-md-4 col-12">
+            <div class="card subscription-card p-4 rounded-1">
+              <div>
+                <h3 class="card-title">Standard Plan</h3>
+                <p class="text-muted">Ideal for daily coffee lovers.</p>
+              </div>
+              <h4 class="text-primary">$29.99/month</h4>
+              <div>
+                <ul class="list-unstyled">
+                    <li>✔ 4 coffee bean deliveries per month</li>
+                    <li>✔ Free shipping</li>
+                    <li>✔ Exclusive blends</li>
+                </ul>
+              </div>
+              <button class="btn btn-dark mt-3 rounded-0">Subscribe Now</button>
+            </div>
+          </div>
+          <!-- Premium Plan -->
+          <div class="col-md-4 col-12">
+            <div class="card subscription-card p-4 rounded-1">
+              <div>
+                <h3 class="card-title">Premium Plan</h3>
+                <p class="text-muted">For the ultimate coffee enthusiasts.</p>
+              </div>
+              <h4 class="text-primary">$49.99/month</h4>
+              <div>
+                <ul class="list-unstyled">
+                    <li>✔ Unlimited coffee bean deliveries</li>
+                    <li>✔ Free shipping</li>
+                    <li>✔ Exclusive blends</li>
+                    <li>✔ Priority customer support</li>
+                </ul>
+              </div>
+              <button class="btn btn-dark mt-3 rounded-0">Subscribe Now</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
     
 
   <!-- footer  -->
@@ -190,11 +256,9 @@
     </footer>
   </div>
 
-    
       
 
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/global.js"></script>
-    <script src="./assets/js/shopping_cart.js"></script>
 </body>
 </html>
